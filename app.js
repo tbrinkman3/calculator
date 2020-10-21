@@ -3,11 +3,11 @@ const display = document.getElementById('display');
 const allClear = document.getElementById('all-clear');
 // One button
 one.addEventListener('click', function(){
-    display.innerHTML = 1
+    display.value = 1
 })
 //Clear button
 allClear.addEventListener('click', function(){
-    display.innerHTML = ''
+    display.textContent = ''
 })
 
 //Calculator functions
