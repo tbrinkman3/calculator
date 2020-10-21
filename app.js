@@ -1,36 +1,55 @@
-const one = document.getElementById('one');
-const display = document.getElementById('display');
-const allClear = document.getElementById('all-clear');
-// One button
-one.addEventListener('click', function(){
-    display.value = 1
-})
-//Clear button
-allClear.addEventListener('click', function(){
-    display.textContent = ''
-})
+const calculator = document.querySelector('.calculator')
+const keys = calculator.querySelector('.calculator_keys')
 
-//Calculator functions
+keys.addEventListener('click', e => {
+    if(e.target.matches('button')){
+        const key = e.target;
+        const action = key.dataset.action;
 
-function add(a,b){
-    return a + b
-}
+        if(!action){
+        console.log('number key!')
+        }
 
-function subtract(a,b){
-    return a-b
-}
+        if(
+            action === 'add'||
+            action === 'subtract' ||
+            action === 'multiply'||
+            action === 'divide'
+        ) {
+            console.log('operator key!')
+        }
 
-function multiply(a,b){
-    return a * b
-}
-
-function divide(a,b){
-    if(a == 0){
-        return 0
-    } else if(b == 0){
-        return "Can't divide by zero"
-    }else{
-        return a/b
+        if (action === 'decimal') {
+            console.log('decimal key!')
+          }
+          
+          if (action === 'clear') {
+            console.log('clear key!')
+          }
+          
+          if (action === 'calculate') {
+            console.log('equal key!')
+          }
     }
-}
+})
+
+const display = document.querySelector('.calculator_display');
+
+keys.addEventListener('click', e => {
+    if(e.target.matches('button')){
+        const key = e.target;
+        const action = key.dataset.action;
+        const keyContent = key.textContent;
+        const displayedNum = display.textContent;
+
+        if(!action) {
+            if(displayedNum === '0') {
+                display.textContent = keyContent
+            } else{
+                display.textContent = displayedNum + keyContent
+            }
+        }
+    }
+})
+
 

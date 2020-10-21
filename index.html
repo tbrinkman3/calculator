@@ -6,41 +6,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="container">
-        <div id="calc">
-            <div id="display"></div>
-            <div id="row5">
-                <button id="left-p">(</button>
-                <button id="right-p">)</button>
-                <button id="percent">%</button>
-                <button id="all-clear">AC</button>
-            </div>
-            <div id="row4">
-                <button id="seven">7</button>
-                <button id="eight">8</button>
-                <button id="nine">9</button>
-                <button id="division">/</button>
-            </div>
-            <div id="row3">
-                <button id="four">4</button>
-                <button id="five">5</button>
-                <button id="six">6</button>
-                <button id="multiply">x</button>
-            </div>
-            <div id="row2">    
-                <button id="one">1</button>
-                <button id="two">2</button>
-                <button id="three">3</button>
-                <button id="subtract">-</button></div>
-            
-            <div id="row1">
-                <button id="zero">0</button>
-                <button id="decimal">.</button>
-                <button id="equals">=</button>
-                <button id="plus">+</button>
-            </div>
-        </div>
-    </div>
+   <div class='calculator'>
+       <div class="calculator_display">0</div>
+       <div class="calculator_keys">
+           <button class="key--operator" data-action="add">+</button>
+           <button class="key--operator" data-action="subtract">-</button>
+           <button class="key--operator" data-action="multiply">&times;</button>
+           <button class="key--operator" data-action="divide">/</button>
+           <button>7</button>
+           <button>8</button>
+           <button>9</button>
+           <button>4</button>
+           <button>5</button>
+           <button>6</button>
+           <button>1</button>
+           <button>2</button>
+           <button>3</button>
+           <button>0</button>
+           <button data-action="decimal">.</button>
+           <button data-action="clear">AC</button>
+           <button class="key--equal" data-action="calculate">=</button>
+       </div>
+   </div>
 
 <script src="app.js"></script>
 </body>
